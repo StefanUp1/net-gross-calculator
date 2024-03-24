@@ -39,10 +39,10 @@ function App() {
         </form>
       </div>
       <div>
-        <span>Month gross salary: </span>
+        <span>Month gross salary in RSD: </span>
         <span>{monthlyGrossSalary}</span>
         <hr />
-        <span>Year gross salary: </span>
+        <span>Year gross salary in RSD: </span>
         <span>{yearlyGrossSalary}</span>
       </div>
     </div>
