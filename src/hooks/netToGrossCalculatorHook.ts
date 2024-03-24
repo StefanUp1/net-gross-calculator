@@ -12,7 +12,6 @@ export const useNetToYearlyGrossCalculator = () => {
   const calculateNetToYearlyGross = (
     netSalary: number,
   ): { monthlyGross: number; yearlyGross: number } => {
-    console.log("tier 1");
     // 1. Net salary lower then lowest net limit defined by country
     if (netSalary < LOWEST_NET_BASE) {
       const tier1Gross =
@@ -29,7 +28,6 @@ export const useNetToYearlyGrossCalculator = () => {
 
     // 2. Net salary between lowest and highest net limit defined by country
     if (netSalary > LOWEST_NET_BASE && netSalary < HIGHEST_NET_BASE) {
-      console.log("tier 2");
       const tier2Gross = (netSalary - NET_SALARY_RELIEF) / 0.701;
 
       return {
@@ -40,7 +38,6 @@ export const useNetToYearlyGrossCalculator = () => {
 
     // 3. Net salary higher then highest net limit defined by country
     if (netSalary > HIGHEST_NET_BASE) {
-      console.log("tier 3");
       const tier3Gross =
         (netSalary -
           NET_SALARY_RELIEF +
